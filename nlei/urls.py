@@ -20,11 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('frontend.urls')),
     path('api/', include('lei.urls')),
-
-<<<<<<< HEAD
-=======
-    # path('', include('pwa.urls')),
->>>>>>> pwa
-    path('', include('pwa1.urls')),
+    path('', include('pwa.urls')),
+    # path('', include('pwa1.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
