@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt">
+    {% load pwa %}
+    {% progressive_web_app_meta %}
+<head>
+    
+    <meta name="description" content="Núcleo formado por alunos de engenharia informática da Universidade lusiadas">
+    <meta name="keywords" content="nlei, universidade lusiada, lusiada">
+    <meta name="author" content="NLEI Members">
+    <meta name="theme-color" content="#3B3B3B">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static './imagens/icons/nlei_icon_x144.svg' %}">
+    <link rel="icon" href="{% static './imagens/icons/nlei_icon_x96.png' %}" type="image/png">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLEI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/d2de26b24a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static './css/navBar.css' %}">
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+    <link rel="stylesheet" href="{% static './css/news.css' %}">
+    <link rel="stylesheet" href="{% static './css/recursos.css' %}">
+
+
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">NLEI</a></h1>
+        <nav>
+            <ul id="menu_mobile">
+                <li><a href="{% url 'lei' %}">LEI</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'recursos' %}">Recursos</a></li>
+                <li><a href="{% url 'calendario' %}">Calendário</a></li>
+                <li><a href="{% url 'notas' %}">Notas</a></li>
+            </ul>
+        </nav>
+        <div id="botao_menu"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <h2>Recursos</h2>
+
+    <main>
+        <div id="top_bar">
+            <button id="abrir_filtro" type="button">Filtrar</button>
+            <div>
+                <form action="">
+                    <input type="search" id="bara_de_pesquisa">
+                    <button type="button" id="pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+            </div>
+        </div>
+
+        <section id="files">
+
+            <!--<a class="recurso" href="#" onclick="abrirDownload(); downloadFile(1)">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>
+                    <p>Exercícios de Algébra</p>
+                    <span>algebra Linear</span>
+                    <span>2020-2021</span>
+                </span>
+            </a>--> 
+        </section>
+        <section id="filtro" class="fixedSession">
+            <form>
+                <button id="fechar_filtro" type="button">fechar</button>
+                <p>Filtrar por:</p>
+
+                <label for="ano_lectivo">Ano:</label>
+                <select name="" id="ano_lectivo">
+                    <!--
+                    <option value="2020">2020</option>                        
+                    -->
+
+                </select>
+
+                <label for="selectCadeira">Cadeira:</label>
+                <select name="" id="selectCadeira">
+                    <!--
+                    <option value="Ingles">Inglês</option>                        
+                    -->
+
+                </select>
+                <button type="button" id="filtrarRecurso">filtrar</button>
+            </form>
+        </section>
+        <section class="baixar fixedSession" id="download">
+            <button id="fechar_download" type="button">fechar</button>
+            <div id="dadosDoRecurso">
+                <p id="nomeDoFicheiro">Aulas de Base de Dados</p>
+                <p>Cadeira: <span id="nomeDaCadeira">Nome da cadeira</span> </p>
+                <p>Docente: <span id="nomeDoDocente">Nome do professor</span> </p>
+                <p>Ano Letivo: <span id="Ano_Letivo">Ano lectivo</span> </p>
+
+                <button id="baixar_ficheiro"><a href="#">Download</a></button>
+            </div>
+        </section>
+
+    </main>
+
+    <!--pagination-->
+    <div class="pagination" id="pagination">
+  
+    </div>
+
+
+    <script src="{% static './js/menu.js' %}"></script>
+    <script src="{% static './js/api/recurso.js' %}"></script>
+    <script src="{% static './js/recursos.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt">
+    {% load pwa %}
+    {% progressive_web_app_meta %}
+<head>
+    
+    <meta name="description" content="Núcleo formado por alunos de engenharia informática da Universidade lusiadas">
+    <meta name="keywords" content="nlei, universidade lusiada, lusiada">
+    <meta name="author" content="NLEI Members">
+    <meta name="theme-color" content="#3B3B3B">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static './imagens/icons/nlei_icon_x144.svg' %}">
+    <link rel="icon" href="{% static './imagens/icons/nlei_icon_x96.png' %}" type="image/png">
+    
+  
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLEI-Calendário</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static './css/navBar.css' %}">
+    <link rel="stylesheet" href="{% static './css/recursos.css' %}">
+    <link rel="stylesheet" href="{% static './css/calendario.css' %}">
+    
+
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">NLEI</a></h1>
+        <nav>
+            <ul id="menu_mobile">
+                <li><a href="{% url 'lei' %}">LEI</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'recursos' %}">Recursos</a></li>
+                <li><a href="{% url 'calendario' %}">Calendário</a></li>
+                <li><a href="{% url 'notas' %}">Notas</a></li>
+            </ul>
+        </nav>
+        <div id="botao_menu"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <h2>Calendário</h2>
+    <main>
+
+
+        <section id="eventos">
+
+            <!--<div class="evento">
+                <div>
+                    <span>ABR</span>
+                    <span>16</span>
+                </div>
+                <div>
+                    <span>Sábado, 11:21AM-05:30PM</span>
+                    <span>Entrega de Trabalho, Ánalise de Sistemas</span>
+                    <details>
+                        <p>Os trabalhos devem ser entregues até o dia do prazo.
+                            Devem colocar todos os ficheiros e zipar.
+                        </p>
+                    </details>
+                    <a href="#">Ver evento</a>
+                </div>
+            </div>-->
+
+        </section>
+
+        <section id="exemplo">
+            
+        </section>
+
+    </main>
+
+    <script src="{% static './js/menu.js' %}"></script>
+    <script src="{% static './js/api/calendario.js' %}"></script>
+
+
+</body>
+
+</html>
