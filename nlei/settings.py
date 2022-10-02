@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'pwa',
-    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
