@@ -27,11 +27,8 @@ SECRET_KEY = 'django-insecure-rb$efk*_1a1dpp=*nqgtjg8qlgkm_(zyk-6z=rh0r@uaod!9k%
 DEBUG = False  # False for deploy
 
 ALLOWED_HOSTS = ['*']
-<<<<<<< HEAD
+
 CSRF_TRUSTED_ORIGINS = ['https://nlei.up.railway.app', 'http://127.0.0.1:8000']
-=======
-CSRF_TRUSTED_ORIGINS = ['https://nlei.up.railway.app/', 'http://127.0.0.1:8000']
->>>>>>> pwa
 
 # Application definition
 
@@ -94,19 +91,14 @@ WSGI_APPLICATION = 'nlei.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'railway',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'jKtnAOPoik6YbYWiyxKA',
-        # 'HOST': 'containers-us-west-53.railway.app',
-        # 'PORT': '6273',
-
-        # sqlite3
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'oRMbuL7HGMA7VFwteRha',
+        'HOST': 'containers-us-west-70.railway.app',
+        'PORT': '6685'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -216,3 +208,5 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'pt'
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
